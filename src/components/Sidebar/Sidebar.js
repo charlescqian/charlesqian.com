@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './Sidebar.css';
-import profile from './profile_picture.jpg';
+import profile from '../../assets/profile_picture-min.jpg';
+import resume from '../../assets/resume.pdf';
 import { Link, animateScroll as scroll } from "react-scroll";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { RiFilePaper2Fill, RiFilePaperFill } from "react-icons/ri";
 
 class Sidebar extends Component {
 
@@ -81,8 +84,22 @@ class Sidebar extends Component {
                             </Link>
                         </li>
                     </ul>
-                    <ul className='nav-items'>
-
+                    <ul className='nav-items icons text-light'>
+                        <li className="nav-item icon">
+                            <a href="https://github.com/charlescqian">
+                                <FaGithub size={20}/> GitHub
+                            </a>
+                        </li>
+                        <li className="nav-item icon">
+                            <a href="https://www.linkedin.com/in/charlescqian/">
+                                <FaLinkedin size={20}/> LinkedIn
+                            </a>
+                        </li>
+                        <li className="nav-item icon">
+                            <a href={resume} target="_blank">
+                                <RiFilePaperFill size={20}/> Resume
+                            </a>
+                        </li>
                     </ul>
                 </div>    
                              

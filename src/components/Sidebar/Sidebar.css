@@ -43,9 +43,6 @@
     box-shadow: 0px 3px 1px -2px #f8f8ff;
 }
 
-
-
-
 .link {
     display: inline-block;
     padding: 6px 10px;
@@ -59,4 +56,9 @@
 
 .profile {
     
+}
+
+.nav-item a {
+    color: inherit; 
+    text-decoration: inherit; /* no underline */
 }
