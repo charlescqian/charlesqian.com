@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 import Section from './components/Section';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Sidebar from './components/Sidebar';
+import Sidebar from './components/Sidebar/Sidebar';
 import dummyText from "./DummyText";
 
 class App extends React.Component {
@@ -15,31 +15,31 @@ class App extends React.Component {
         <Sidebar />
         <Section 
           id="home" 
-          subtitle={dummyText}
+          text={dummyText}
           dark={true}
           title="Home"
         />
         <Section 
           id="about" 
-          subtitle={dummyText}
+          text={dummyText}
           dark={false}
           title="about"
         />
         <Section 
           id="experience" 
-          subtitle={dummyText}
+          text={dummyText}
           dark={true}
           title="experience"
         />
         <Section 
           id="projects" 
-          subtitle={dummyText}
+          text={dummyText}
           dark={false}
           title="projects"
         />
         <Section 
           id="extras" 
-          subtitle={dummyText}
+          text={dummyText}
           dark={true}
           title="extras"
         />

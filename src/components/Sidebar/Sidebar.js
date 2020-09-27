@@ -9,13 +9,15 @@ class Sidebar extends Component {
         return (
             <nav className="sidebar bg-dark" id="sidebar">
                 <div className="nav-content">
-                    <img src={profile} className="img-thumbnail rounded-circle img-fluid w-75" />
-                    <ul className="navbar-nav mr-auto py-4">
-                        <li className="text-light">Charles Qian</li>
-                    </ul>
+                    <section className='profile'>
+                        <img src={profile} className="img-thumbnail rounded-circle img-fluid w-75" />
+                        <p className="name text-light">Charles Qian</p>
+                    </section>
+                    
                     <ul className="nav-items text-light">
-                        <li className="nav-item text-light">
+                        <li className="nav-item">
                             <Link
+                                className="link"
                                 activeClass="active"
                                 to="home"
                                 spy={true}
@@ -28,6 +30,7 @@ class Sidebar extends Component {
                         </li>
                         <li className="nav-item">
                             <Link
+                                className="link"
                                 activeClass="active"
                                 to="about"
                                 spy={true}
@@ -40,6 +43,7 @@ class Sidebar extends Component {
                         </li>
                         <li className="nav-item">
                             <Link
+                                className="link"
                                 activeClass="active"
                                 to="experience"
                                 spy={true}
@@ -52,6 +56,7 @@ class Sidebar extends Component {
                         </li>
                         <li className="nav-item">
                             <Link
+                                className="link"
                                 activeClass="active"
                                 to="projects"
                                 spy={true}
@@ -64,6 +69,7 @@ class Sidebar extends Component {
                         </li>
                         <li className="nav-item">
                             <Link
+                                className="link"
                                 activeClass="active"
                                 to="extras"
                                 spy={true}
@@ -74,6 +80,9 @@ class Sidebar extends Component {
                                 Extras
                             </Link>
                         </li>
+                    </ul>
+                    <ul className='nav-items'>
+
                     </ul>
                 </div>    
                              
