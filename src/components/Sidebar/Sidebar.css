@@ -34,14 +34,17 @@
     user-select: none; /* Standard */
 }
 
-.nav-item > .active {
-    border-bottom: 1px solid #f8f8ff;
-}
-
 .nav-item:hover {
-    border-bottom: 1px solid #f8f8ff;
+    box-shadow: 0px 3px 1px -2px #f8f8ff;
     cursor: pointer;
 }
+
+.nav-item > .active{
+    box-shadow: 0px 3px 1px -2px #f8f8ff;
+}
+
+
+
 
 .link {
     display: inline-block;
