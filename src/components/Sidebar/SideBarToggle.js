@@ -1,9 +1,12 @@
 import React from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const sideBarToggle = props => {
-    <button>
-        <div className=""></div>
-    </button>
+    return (
+        <button>
+            <GiHamburgerMenu/>
+        </button>
+    );
 }
 
 export default sideBarToggle;

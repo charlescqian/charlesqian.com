@@ -5,12 +5,19 @@ import resume from '../../assets/resume.pdf';
 import { Link, animateScroll as scroll } from "react-scroll";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { RiFilePaperFill } from "react-icons/ri";
+import "./SideBarToggle"
+import SideBarToggle from './SideBarToggle';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 class Sidebar extends Component {
 
     render() {
         return (
-            <nav className="sidebar bg-dark" id="sidebar" data-toggle="collapse">
+            <nav className="sidenav bg-dark" id="sidenav" data-toggle="collapse">
+                {/* <SideBarToggle/> */}
+                <button className="nav-toggle btn btn-dark">
+                    <GiHamburgerMenu size={25}/>
+                </button>
                 <div className="nav-content">
                     <section className='profile'>
                         <img src={profile} className="img-thumbnail rounded-circle img-fluid w-75" />
