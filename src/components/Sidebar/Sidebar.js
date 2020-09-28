@@ -4,13 +4,13 @@ import profile from '../../assets/profile_picture-min.jpg';
 import resume from '../../assets/resume.pdf';
 import { Link, animateScroll as scroll } from "react-scroll";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { RiFilePaper2Fill, RiFilePaperFill } from "react-icons/ri";
+import { RiFilePaperFill } from "react-icons/ri";
 
 class Sidebar extends Component {
 
     render() {
         return (
-            <nav className="sidebar bg-dark" id="sidebar">
+            <nav className="sidebar bg-dark" id="sidebar" data-toggle="collapse">
                 <div className="nav-content">
                     <section className='profile'>
                         <img src={profile} className="img-thumbnail rounded-circle img-fluid w-75" />
@@ -86,12 +86,12 @@ class Sidebar extends Component {
                     </ul>
                     <ul className='nav-items icons text-light'>
                         <li className="nav-item icon">
-                            <a href="https://github.com/charlescqian">
+                            <a href="https://github.com/charlescqian" target="_blank">
                                 <FaGithub size={20}/> GitHub
                             </a>
                         </li>
                         <li className="nav-item icon">
-                            <a href="https://www.linkedin.com/in/charlescqian/">
+                            <a href="https://www.linkedin.com/in/charlescqian/" target="_blank">
                                 <FaLinkedin size={20}/> LinkedIn
                             </a>
                         </li>

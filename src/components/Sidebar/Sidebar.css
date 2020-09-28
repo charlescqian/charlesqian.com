@@ -36,16 +36,12 @@
 
 .nav-item:hover {
     box-shadow: 0px 3px 1px -2px #f8f8ff;
+    transition: box-shadow 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .nav-item > .active{
     box-shadow: 0px 3px 1px -2px #f8f8ff;
-}
-
-.link {
-    display: inline-block;
-    padding: 6px 10px;
 }
 
 .name {
@@ -61,4 +57,12 @@
 .nav-item a {
     color: inherit; 
     text-decoration: inherit; /* no underline */
+    display: inline-block;
+    padding: 6px 10px;
+}
+
+@media (max-width: 768px) {
+    .nav-content {
+        display: none;
+    }
 }
