@@ -5,13 +5,58 @@ import Section from './components/Section';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Sidebar from './components/Sidebar/Sidebar';
 import dummyText from "./DummyText";
+import SideBarToggle from './components/Sidebar/SidebarToggle';
+import { Drawer, Hidden } from '@material-ui/core';
+import navContent from "./components/Sidebar/NavContent";
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import './components/Sidebar/Sidebar.css';
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      sideBarOpen: true,
+    }
+
+    this.handleSideBarToggle = this.handleSideBarToggle.bind(this);
+  }
+  
+  handleSideBarToggle() {
+    this.setState({
+      sideBarOpen: !this.sideBarOpen,
+    });
+  }
+
   render() {
     return (
       <div className="App">
         {/* <Header /> */}
-        <Sidebar />
+        {/* <SideBarToggle handleSideBarToggle={this.handleSideBarToggle}/>
+        <Sidebar sideBarOpen={this.state.sideBarOpen}/> */}
+        <nav>
+          <Hidden smUp implementation="css">
+            <Drawer
+              variant="temporary"
+              anchor="left"
+              open={this.state.sideBarOpen}
+              onClose={this.handleSideBarToggle}
+              ModalProps={{
+                keepMounted: true,
+              }}
+              >
+              {navContent}
+            </Drawer>
+          </Hidden>
+          <Hidden xsDown implementation="css">
+            <Drawer
+              variant="permanent"
+              open
+              style={{backgroundColor: '#495867'}}
+            >
+              {navContent}
+            </Drawer>
+          </Hidden>
+        </nav>
         <Section 
           id="home" 
           text={dummyText}
@@ -22,25 +67,25 @@ class App extends React.Component {
           id="about" 
           text={dummyText}
           dark={false}
-          title="about"
+          title="About Me"
         />
         <Section 
           id="experience" 
           text={dummyText}
           dark={true}
-          title="experience"
+          title="My Journey"
         />
         <Section 
-          id="projects" 
+          id="projects"  
           text={dummyText}
           dark={false}
-          title="projects"
+          title="My Projects" 
         />
         <Section 
           id="extras" 
           text={dummyText}
           dark={true}
-          title="extras"
+          title="Extras"
         />
         <Footer />
       </div>

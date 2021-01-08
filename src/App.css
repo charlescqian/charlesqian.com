@@ -22,11 +22,14 @@
 
 
 .section {
+  background: #f7f7ff;
 }
 
 .section-dark {
-  background: #333;
-  color: white;
+  background: #ced4d9;
+  /* background: #e4e7ea; */
+  /* background: #d9dde1; */
+  color: black;
 }
 
 .section-content {

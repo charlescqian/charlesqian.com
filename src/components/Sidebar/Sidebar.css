@@ -3,10 +3,21 @@
     width: 350px;
     z-index: 1;
     position: fixed;
-    top: 0;
+    top: 40;
     left: 0;
+    transition: 300ms;
     padding-top: 20px;
     box-shadow: 4px 0 14px 0 rgba(0, 0, 0, 0.15);
+    background: #495867;
+}
+
+.sidenav .expanded {
+
+}
+
+.sidenav .hidden {
+    left: -100%;    
+    transition: 300ms;
 }
 
 .sidenav .nav-content {
@@ -56,7 +67,9 @@
 }
 
 .profile {
-    
+    width: 360px;
+    text-align: center;
+    background: 
 }
 
 .nav-item a {
@@ -71,10 +84,8 @@
     width: 40px;
 }
 
+
 @media (max-width: 768px) {
-    .sidenav .nav-toggle {
-        display: block;
-    }
     .sidenav {
         display: none;
     }

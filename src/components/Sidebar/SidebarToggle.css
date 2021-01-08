@@ -1,0 +1,27 @@
+.sidenav-toggle {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 20;
+    left: 20;
+    border: none;
+    background-color: transparent;
+    color: #FE5F55;
+    outline: #000000;
+}
+
+.sidenav-toggle:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.sidenav-toggle:focus {
+    outline: none;
+}
+
+@media (min-width: 769px) {
+    .sidenav-toggle {
+        display: none;
+    }
+}
