@@ -11,13 +11,8 @@
     background: #495867;
 }
 
-.sidenav .expanded {
-
-}
-
-.sidenav .hidden {
-    left: -100%;    
-    transition: 300ms;
+.sidenav.hidden {
+    transform: translateX(-100%);
 }
 
 .sidenav .nav-content {
@@ -66,11 +61,11 @@
     margin: 1.5rem;
 }
 
-.profile {
+/* .profile {
     width: 360px;
     text-align: center;
     background: 
-}
+} */
 
 .nav-item a {
     color: inherit; 
@@ -84,12 +79,12 @@
     width: 40px;
 }
 
-
+/* 
 @media (max-width: 768px) {
     .sidenav {
-        display: none;
+        left: -100%;
     }
     .nav-content {
-        display: none;
+        left: -100%;
     }
-}
+} */

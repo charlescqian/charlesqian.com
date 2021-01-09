@@ -8,38 +8,45 @@ import dummyText from "./DummyText";
 import SideBarToggle from './components/Sidebar/SidebarToggle';
 import { Drawer, Hidden } from '@material-ui/core';
 import navContent from "./components/Sidebar/NavContent";
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { withStyles, makeStyles, useTheme } from '@material-ui/core/styles';
 import './components/Sidebar/Sidebar.css';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      sideBarOpen: true,
+      sideBarOpen: window.innerWidth > 768 ? true : false,
     }
-
+    
     this.handleSideBarToggle = this.handleSideBarToggle.bind(this);
   }
   
   handleSideBarToggle() {
     this.setState({
-      sideBarOpen: !this.sideBarOpen,
+      sideBarOpen: !this.state.sideBarOpen,
     });
+    console.log("clicked");
   }
 
   render() {
+    const { classes } = this.props;
     return (
       <div className="App">
         {/* <Header /> */}
-        {/* <SideBarToggle handleSideBarToggle={this.handleSideBarToggle}/>
-        <Sidebar sideBarOpen={this.state.sideBarOpen}/> */}
-        <nav>
+        <SideBarToggle handleSideBarToggle={this.handleSideBarToggle}/>
+
+        <Sidebar sideBarOpen={this.state.sideBarOpen}/>
+        
+        {/* <nav className={classes.drawer}>
           <Hidden smUp implementation="css">
             <Drawer
               variant="temporary"
               anchor="left"
               open={this.state.sideBarOpen}
               onClose={this.handleSideBarToggle}
+              classes={{
+                paper: classes.drawerPaper
+              }}
               ModalProps={{
                 keepMounted: true,
               }}
@@ -49,6 +56,10 @@ class App extends React.Component {
           </Hidden>
           <Hidden xsDown implementation="css">
             <Drawer
+              className={classes.root}
+              classes={{
+                paper: classes.drawerPaper
+              }}
               variant="permanent"
               open
               style={{backgroundColor: '#495867'}}
@@ -56,7 +67,7 @@ class App extends React.Component {
               {navContent}
             </Drawer>
           </Hidden>
-        </nav>
+        </nav> */}
         <Section 
           id="home" 
           text={dummyText}

@@ -17,7 +17,7 @@ class Sidebar extends Component {
     
     render() {
         return (
-            <nav className={"sidenav" + (this.props.sideBarOpen ? "" : "hidden")} id="sidenav" data-toggle="collapse">
+            <nav className={"sidenav" + (this.props.sideBarOpen ? "" : " hidden")} id="sidenav" data-toggle="collapse">
                 {/* <SideBarToggle/> */}
                 {navContent} 
             </nav>
