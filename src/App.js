@@ -10,6 +10,7 @@ import { Drawer, Hidden } from '@material-ui/core';
 import navContent from "./components/Sidebar/NavContent";
 import { withStyles, makeStyles, useTheme } from '@material-ui/core/styles';
 import './components/Sidebar/Sidebar.css';
+import ProjectsList from './components/Projects/ProjectsList';
 
 class App extends React.Component {
   constructor() {
@@ -33,41 +34,9 @@ class App extends React.Component {
     return (
       <div className="App">
         {/* <Header /> */}
+        {/* TODO: Wrap this in a nav and the main content in another div */}
         <SideBarToggle handleSideBarToggle={this.handleSideBarToggle}/>
-
         <Sidebar sideBarOpen={this.state.sideBarOpen}/>
-        
-        {/* <nav className={classes.drawer}>
-          <Hidden smUp implementation="css">
-            <Drawer
-              variant="temporary"
-              anchor="left"
-              open={this.state.sideBarOpen}
-              onClose={this.handleSideBarToggle}
-              classes={{
-                paper: classes.drawerPaper
-              }}
-              ModalProps={{
-                keepMounted: true,
-              }}
-              >
-              {navContent}
-            </Drawer>
-          </Hidden>
-          <Hidden xsDown implementation="css">
-            <Drawer
-              className={classes.root}
-              classes={{
-                paper: classes.drawerPaper
-              }}
-              variant="permanent"
-              open
-              style={{backgroundColor: '#495867'}}
-            >
-              {navContent}
-            </Drawer>
-          </Hidden>
-        </nav> */}
         <Section 
           id="home" 
           text={dummyText}
@@ -92,6 +61,7 @@ class App extends React.Component {
           dark={false}
           title="My Projects" 
         />
+        <ProjectsList/>
         <Section 
           id="extras" 
           text={dummyText}
